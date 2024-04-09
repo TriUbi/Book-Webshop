@@ -41,7 +41,7 @@ export const NavBar = () => {
           isActive ? "nav-link-active" : "nav-link"
         }
       >
-        <h1>Products</h1>
+        <h1>Books</h1>
       </NavLink>
       <NavLink
         to={"/checkout"}
