@@ -3,6 +3,10 @@ import { LogoutBtn } from "./LogoutBtn";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../context/UserContext";
 import { authorizeUser } from "../services/authServices";
+import './NavBar.css'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping} from "@fortawesome/free-solid-svg-icons"
+
 
 export const NavBar = () => {
   const {user, setUser} = useContext(UserContext)
@@ -45,7 +49,9 @@ export const NavBar = () => {
           isActive ? "nav-link-active" : "nav-link"
         }
       >
-       <h1>Checkout</h1>
+       <h1> 
+        <FontAwesomeIcon icon={faCartShopping} />
+        </h1>
       </NavLink>
       {!user ? <NavLink
         to={"/login"}

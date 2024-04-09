@@ -22,16 +22,20 @@ export const Checkout = () => {
             if (i.quantity <= 1) return setCart(cart.filter(p => p.id !== i.id))     
             let newCart = cart.map(p => p.id === i.id ? {...p, quantity: p.quantity-1} : p)
             setCart(newCart)
-          }}>Ta bort</button>
+          }}>
+            X
+            </button>
         </div>
       ))}
-      {cart.length <= 0 ? <p>Du har inga produkter i din varukorg</p> : <button onClick={async () => {
+      {cart.length <= 0 ? 
+      <p>You have no items in your shopping cart</p> : 
+      <button onClick={async () => {
         const isLoggedIn = await authorizeUser()
         if (!isLoggedIn) return
         const response = await axios.post("http://localhost:3000/api/stripe/checkout", {id: user?.id, cart: cart, coupon: discountName}, {withCredentials: true})
         localStorage.setItem("stripeSessionId", JSON.stringify(response.data.sessionId))
         if (response.status === 200) window.location.href = response.data.url
-        }}>Köp</button>}
+        }}>BUY</button>}
         <input value={discountName} onChange={(e)=> setDiscountName(e.target.value)} placeholder="Discount Code"></input>
     </>
   );

@@ -22,5 +22,5 @@ export const PaymentResult = () => {
         verifyPayment()
     }, [verified])
 
-    return <>{verified && !isLoading ? "Tack för ditt köp! Välkommen åter" : "wait"}</>
+    return <>{verified && !isLoading ? "Thank you for shopping!" : "Wait"}</>
 }

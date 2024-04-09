@@ -1,0 +1,29 @@
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b0900;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .NavBar h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: lightgray;
+  }
+  
+  .nav-link-active {
+    color: rgb(191, 145, 129);
+  }
+  

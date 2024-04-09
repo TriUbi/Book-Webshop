@@ -2,6 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { ProductList } from "../models/ProductList";
 import axios from "axios";
 import { CartContext } from "../context/CartContext";
+import './Products.css'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping} from "@fortawesome/free-solid-svg-icons"
 
 export const Products = () => {
   const {cart, setCart} = useContext(CartContext)
@@ -39,7 +42,7 @@ export const Products = () => {
               type: p.default_price.type,
               unit_amount: p.default_price.unit_amount
             }])}
-          }}>Add to Cart</button>
+          }}> <FontAwesomeIcon icon={faCartShopping} /></button>
         </div>
       ))}
     </>

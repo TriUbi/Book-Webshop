@@ -4,5 +4,17 @@
     "email": "triubilla@gmail.com",
     "username": "trinidad",
     "password": "$2b$10$gmfhyHDiosnIKW4x.Aj2HusfWrrfVadxtiyh8VPwkqplIjJ321CcG"
+  },
+  {
+    "id": "cus_PtOM38lVIxRCCO",
+    "email": "test@gmail.com",
+    "username": "testing",
+    "password": "$2b$10$OB/O9b6adebTJJbZmIPI0ektSj.t66.XedZoqLMdRfi/Jqq8z7Jji"
+  },
+  {
+    "id": "cus_PtRY41K6Szwgqs",
+    "email": "test2@gmail.com",
+    "username": "test2",
+    "password": "$2b$10$/RFYiO.Wg41DXmPDdBdAVOxedKe4ZuDe7E1YALr9VwMRE56dWw.Ve"
   }
 ]
