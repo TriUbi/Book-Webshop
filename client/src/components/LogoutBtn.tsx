@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const LogoutBtn = () => {
     const {setUser} = useContext(UserContext)
@@ -13,7 +15,7 @@ export const LogoutBtn = () => {
         if (reponse.status === 200) setUser()
       }}
     >
-      Log Out
+      <FontAwesomeIcon icon={faRightFromBracket} />
     </button>
   );
 };

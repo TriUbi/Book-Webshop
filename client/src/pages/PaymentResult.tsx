@@ -18,9 +18,8 @@ export const PaymentResult = () => {
                 setIsLoading(false)
             }
         }
-
         verifyPayment()
     }, [verified])
 
-    return <>{verified && !isLoading ? "Thank you for shopping!" : "Wait"}</>
+    return <>{verified && !isLoading ? "Thank you for shopping! "  : "Wait"}</>
 }
