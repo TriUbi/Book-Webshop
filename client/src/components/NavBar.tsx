@@ -45,7 +45,7 @@ export const NavBar = () => {
           isActive ? "nav-link-active" : "nav-link"
         }
       >
-        <h1>Checkout</h1>
+       <h1>Checkout</h1>
       </NavLink>
       {!user ? <NavLink
         to={"/login"}
