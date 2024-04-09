@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "triubilla@gmail.com",
+    "username": "trinidad",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "triubilla@gmail.com",
+    "password": "123456"
+}
+### 
+GET http://localhost:3000/api/stripe/products
+###
+POST http://localhost:3000/api/stripe/verify-payment
+Content-Type: application/json
+
+{"sessionId": "cs_test_a1rQUUYpYLW6d3skZLzjt0rvg4X4txgr05UhPbwEGkiISdi6fi4c3UTxQm"}
