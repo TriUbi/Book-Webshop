@@ -4,6 +4,7 @@ const cookieSession = require("cookie-session");
 
 const authRoutes = require("./authentication/router");
 const stripeRoutes = require("./stripe/router")
+const postnordRoutes = require("./postnord/router")
 
 const PORT = 3000;
 
@@ -21,5 +22,6 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/stripe", stripeRoutes)
+app.use("/api/postnord", postnordRoutes)
 
 app.listen(PORT, () => console.log("Server is up"));
