@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
+import "./Login.css"
 
 export const Login = () => {
   const {setUser} = useContext(UserContext)
@@ -13,6 +14,12 @@ export const Login = () => {
   
   return (
     <>
+    <div className="text">
+      <h2>
+      Reading: Optimal Decision
+      </h2>
+    </div>
+    <div className="login-container-form">
       <input
         placeholder="Username or Email"
         value={loginInfo.nameOrEmail}
@@ -47,6 +54,7 @@ export const Login = () => {
       >
         Log In
       </button>
+      </div>
     </>
   );
 };

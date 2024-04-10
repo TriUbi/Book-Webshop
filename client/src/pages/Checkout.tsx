@@ -17,7 +17,7 @@ export const Checkout = () => {
       {cart.map((i) => (
         <div className="product" key={i.id}>
           <p>
-            {i.name} - Total: {(i.unit_amount / 100) * i.quantity}
+            {i.name} - Price: {(i.unit_amount / 100) * i.quantity}
             {i.currency}
           </p>
           <img className="productImg" src={i.images[0]} alt={i.name} />
@@ -34,7 +34,8 @@ export const Checkout = () => {
       <p>You have no items in your shopping cart <FontAwesomeIcon icon={faFaceSadTear} /></p> : 
       <button onClick={async () => {
         const isLoggedIn = await authorizeUser()
-        if (!isLoggedIn) return
+        if (!isLoggedIn)
+         return
         const response = await axios.post("http://localhost:3000/api/stripe/checkout", {id: user?.id, cart: cart, coupon: discountName}, {withCredentials: true})
         localStorage.setItem("stripeSessionId", JSON.stringify(response.data.sessionId))
         if (response.status === 200) window.location.href = response.data.url

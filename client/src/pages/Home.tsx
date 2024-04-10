@@ -2,6 +2,7 @@ import { faReadme } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Home.css'; 
 import video from "../assets/banner.mp4"
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return <>
@@ -13,9 +14,7 @@ export const Home = () => {
       <h1 className='title'>Welcome to your favorite online book store! 
       <br />
       <FontAwesomeIcon icon={faReadme} /></h1>
-      <button className='banner-btn'>
-        Browse Books
-        </button>
+      <Link to="/products" className='banner-btn'>Browse Books</Link>
     </div>
   </div>
 

@@ -6,20 +6,28 @@ export const PaymentResult = () => {
     const [isLoading, setIsLoading] = useState(true)
     
     useEffect(() => {
-        if(verified) return
+        if (verified) return
 
         const verifyPayment = async () => {
             let sessionId = localStorage.getItem("stripeSessionId")
             if (!sessionId) return
             sessionId = JSON.parse(sessionId)
-            const response = await axios.post("http://localhost:3000/api/stripe/verify-payment", {sessionId: sessionId})
-            if (response.status === 200) {
-                setVerified(response.data.isPayed)
+            
+            try {
+                const response = await axios.post("http://localhost:3000/api/stripe/verify-payment", { sessionId })
+                
+                if (response.status === 200) {
+                    setVerified(response.data.isPayed)
+                }
+            } catch (error) {
+                console.error("Error verifying payment:", error)
+            } finally {
                 setIsLoading(false)
             }
         }
+
         verifyPayment()
     }, [verified])
 
-    return <>{verified && !isLoading ? "Thank you for shopping! "  : "Wait"}</>
+    return <>{verified && !isLoading ? "Thank you for shopping!" : "Wait"}</>
 }
