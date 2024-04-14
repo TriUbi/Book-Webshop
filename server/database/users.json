@@ -40,5 +40,11 @@
     "email": "jdhgjkds@test.com",
     "username": "Testtttt",
     "password": "$2b$10$63TfBkHiXiF3YQJ4kR/Fa.LK6s.1sARX5NrgcxTWGL8Eai7SAQ9Hu"
+  },
+  {
+    "id": "cus_Pu8lC3TyYQW0kx",
+    "email": "testttt@gmail.com",
+    "username": "TEST2000",
+    "password": "$2b$10$vmme44b/v4wGHmdGqHwwge/OVz76qdZZK6P1YjQUgn3cYNCzaTIEK"
   }
 ]

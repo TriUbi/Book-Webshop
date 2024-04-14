@@ -21,3 +21,27 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+.service-point-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid skyblue;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.service-point-container input {
+ margin-bottom: 8px;
+}
+
+.service-point-text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.service-point-option{
+    border-bottom: 3px solid skyblue;
+    padding: 10px;
+    cursor: pointer;
+}

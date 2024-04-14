@@ -32,7 +32,37 @@ export const Checkout = () => {
           }}>X</button>
         </div>
       ))}
-      {cart.length <= 0 ? 
+
+        <div className="service-point-container">
+        <input value={adressInput.adress} 
+        onChange={(e)=> 
+        setAdressInput({
+          ...adressInput, 
+        adress: e.target.value
+      })} 
+        placeholder="Address"/>
+        <input 
+        value={adressInput.postalCode} 
+        onChange={(e)=> 
+          setAdressInput({
+          ...adressInput, 
+          postalCode: e.target.value
+          })} 
+          placeholder="Postnummber"/>
+        <button 
+        onClick={async()=> {
+          if (!adressInput.adress || !adressInput.postalCode) 
+          return
+        const response = await axios.post("http://localhost:3000/api/postnord/delivery-adress", 
+        {
+          adress: adressInput.adress, 
+          postalCode: adressInput.postalCode}, 
+          {withCredentials: true})
+        setServicePoints(response.data)
+        }}>
+          <FontAwesomeIcon icon={faTruck} />
+          </button>
+          {cart.length <= 0 ? 
       <p>You don't have any books in your cart
          <FontAwesomeIcon icon={faFaceSadTear} />
          </p> : 
@@ -56,42 +86,19 @@ export const Checkout = () => {
           Buy
         </button>
         }
-        <input value={adressInput.adress} 
-        onChange={(e)=> 
-        setAdressInput({
-          ...adressInput, 
-        adress: e.target.value
-      })} 
-        placeholder="Address"/>
-        <input value={adressInput.postalCode} 
-        onChange={(e)=> setAdressInput({
-          ...adressInput, 
-          postalCode: e.target.value
-          })} 
-          placeholder="Postnummber"/>
-        <button 
-        onClick={async()=> {
-          if (!adressInput.adress || !adressInput.postalCode) 
-          return
-        const response = await axios.post("http://localhost:3000/api/postnord/delivery-adress", 
-        {adress: adressInput.adress, 
-          postalCode: adressInput.postalCode}, 
-          {withCredentials: true})
-        setServicePoints(response.data)
-        }}>
-          Delivery Point
-          <FontAwesomeIcon icon={faTruck} />
-          </button>
+          </div>
+          <div className="service-point-text">
         {servicePoints?.map(sp => 
         <div 
-        key={sp.servicePointId} 
-        className="servicePoint" 
+        className="service-point-option"
+        key={sp.servicePointId}  
         onClick={()=> 
         setServicePoint(sp)}>{
         sp.name
         }
         </div>
         )}
+        </div>
     </>
   );
 };

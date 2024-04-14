@@ -18,7 +18,8 @@ export const Products = () => {
       );
       setProducts(response.data);
     };
-    fetchProducts();
+    fetchProducts(); 
+    
   });
   
   return (
@@ -26,7 +27,7 @@ export const Products = () => {
       {products?.data.map((p) => (
         <div className="product" key={p.id}>
           <p>{p.name} - {p.default_price?.unit_amount / 100}</p>
-          <img className="productImg" src={p.images[0]} alt={p.name}/>
+          <img className="product-img" src={p.images[0]} alt={p.name}/>
           <button onClick={() => {
             const cartItem = cart.find(i => i.id === p.default_price.id)
             if (cartItem) {
