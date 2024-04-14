@@ -26,8 +26,8 @@ Create a .env file in the server directory. These files should contain necessary
 
 `.env` i server:
 ```
-STRIPE_KEY="YOUR_KEY_HERE"
-POSTNORD_KEY="YOUR_KEY_HERE"
+STRIPE_API_KEY="YOUR_KEY_HERE"
+POSTNORD_API_KEY="YOUR_KEY_HERE"
 ```
 
 ## Running the project
