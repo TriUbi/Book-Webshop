@@ -25,3 +25,5 @@ app.use("/api/stripe", stripeRoutes)
 app.use("/api/postnord", postnordRoutes)
 
 app.listen(PORT, () => console.log("Server is up"));
+
+
