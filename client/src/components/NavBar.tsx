@@ -35,6 +35,7 @@ export const NavBar = () => {
       >
         <h1>Home</h1>
       </NavLink>
+
       <NavLink
         to={"/products"}
         className={({ isActive }) =>
@@ -43,6 +44,7 @@ export const NavBar = () => {
       >
         <h1>Books</h1>
       </NavLink>
+
       <NavLink
         to={"/checkout"}
         className={({ isActive }) =>
@@ -53,6 +55,7 @@ export const NavBar = () => {
         <FontAwesomeIcon icon={faCartShopping} />
         </h1>
       </NavLink>
+
       {!user ? <NavLink
         to={"/login"}
         className={({ isActive }) =>
@@ -61,6 +64,7 @@ export const NavBar = () => {
       >
         <h1>Login</h1>
       </NavLink>: <LogoutBtn/>}
+
       <NavLink
         to={"/register"}
         className={({ isActive }) =>
@@ -69,7 +73,17 @@ export const NavBar = () => {
       >
         <h1>Register</h1>
       </NavLink>
-      {user && <h1>{user.username}</h1>}
+
+      <NavLink
+        to={"/admin"}
+        className={({ isActive }) =>
+          isActive ? "nav-link-active" : "nav-link"
+        }
+      >
+        <h1>Admin</h1>
+      </NavLink>
+
+      {user && <h1>{user.username} </h1>}
     </div>
   );
 };
