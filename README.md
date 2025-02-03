@@ -1,5 +1,8 @@
 # Book Webshop med Stripe
 
+[LIVE DEMO HERE!!!](https://triubi.github.io/Book-Webshop/)
+
+
 ## Project description
 In this project, I build a webshop with Stripe integration. 
 Users should be able to register and add products to a shopping cart. They should then be able to check out using Stripe through the shopping cart and complete their payment. Additionally, for the highest grade (VG), users should be able to find their nearest pickup location using PostNord's API.
