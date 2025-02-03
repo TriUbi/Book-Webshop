@@ -1,6 +1,6 @@
 # Book Webshop med Stripe
 
-[LIVE DEMO HERE!!!](https://triubi.github.io/Book-Webshop/)
+[LIVE DEMO HERE!!!](https://triubi.github.io/Book-Webshop/){:target="_blank"}
 
 
 ## Project description
