@@ -1,6 +1,7 @@
 # Book Webshop med Stripe
 
-<a href="[https://tu-enlace.com](https://triubi.github.io/Book-Webshop/)" target="_blank" rel="noopener noreferrer">LIVE DEMO HERE!!!</a>
+<a href="https://triubi.github.io/Book-Webshop/" target="_blank" rel="noopener noreferrer">LIVE DEMO HERE!!!</a>
+
 
 
 
